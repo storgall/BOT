@@ -6,8 +6,6 @@
 	async function sleep1000(){
 		await sleep(1000);
 	}
-
-demo();
 	
 	
 	API.getWaitListPosition = function(id) {
