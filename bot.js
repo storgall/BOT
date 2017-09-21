@@ -17,8 +17,8 @@
 	
  	var init = function(){
 		//API.sendChat(API.getWaitListPosition(6117568).toString())
-		//API.sendChat(stor["version"])
-		API.sendChat(API.getUser(6117568)["id"])
+		API.sendChat(stor["version"])
+		API.sendChat(API.getUser(6117568).id)
 		//API.sendChat("Done!")
 	}
 
