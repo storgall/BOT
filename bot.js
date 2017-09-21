@@ -17,7 +17,7 @@
 		return -1;
 	};
 	
-	API.sendChat(API.getWaitListPosition(6117568))
+	API.sendChat(API.getWaitListPosition("6117568"))
 	
 	
 	
