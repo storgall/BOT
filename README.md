@@ -1,0 +1,2 @@
+# BOT
+plug dj BOT
