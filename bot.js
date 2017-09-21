@@ -4,7 +4,7 @@
 		return new Promise(resolve => setTimeout(resolve, ms));
 	}
 	async function sleep1000(){
-		await sleep(1000);
+		await sleep(10000);
 	}
 	
 	
