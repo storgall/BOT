@@ -8,7 +8,7 @@
 		var wl = API.getWaitList();
 		for (var i = 0; i < wl.length; i++) {
 			if (wl[i].id === id) {
-				API.sendChat("i")
+				API.sendChat(i)
 				return i;
 			}
 		}
