@@ -17,12 +17,12 @@
 		return -1;
 	};
 	
-	API.sendChat(sting(API.getWaitListPosition(6117568)))
+	API.getWaitListPosition(6117568)
 	
 	
 	
  	var init = function(){
-		API.sendChat("Hello")
+		API.sendChat("Done!")
 	}
 
 	var stor = {
