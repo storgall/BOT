@@ -20,6 +20,7 @@
 	
  	var init = function(){
 		API.sendChat("Done!")
+		API.sendChat(API.getWaitListPosition(6117568).toString())
 	}
 
 	var stor = {
@@ -28,7 +29,7 @@
 		name: "stor"
 	}
 	
-	API.getWaitListPosition(6117568)	
+	
 	
 	init();
 
