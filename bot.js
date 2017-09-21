@@ -1,7 +1,7 @@
 (function(){
 	
 	
-	/*API.getWaitListPosition = function(id) {
+	API.getWaitListPosition = function(id) {
 		API.sendChat("1")
 		if (typeof id === 'undefined' || id === null) {
 			API.sendChat("2")
@@ -15,7 +15,7 @@
 			}
 		}
 		return -1;
-	};*/
+	};
 	
 	API.sendChat(sting(API.getWaitListPosition(6117568)))
 	
