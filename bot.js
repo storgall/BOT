@@ -2,7 +2,6 @@
 	
 	
 	API.getWaitListPosition = function(id) {
-		API.sendChat("I'm here, bot")
 		if (typeof id === 'undefined' || id === null) {
 			id = API.getUser().id;
 		}
@@ -29,7 +28,7 @@
 		name: "stor"
 	}
 	
-	API.getWaitListPosition("6117568")	
+	API.getWaitListPosition(6117568)	
 	
 	init();
 
