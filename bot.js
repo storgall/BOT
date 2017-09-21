@@ -7,7 +7,7 @@
 		var wl = API.getWaitList();
 		for (var i = 0; i < wl.length; i++) {
 			if (wl[i].id === id) {
-				//API.sendChat(i.toString())
+				API.sendChat(i.toString())
 				return i;
 			}
 		}
@@ -18,9 +18,9 @@
 	
 	
  	var init = function(){
-		API.sendChat("Done!")
 		API.sendChat(API.getWaitListPosition(6117568).toString())
 		API.sendChat(stor[version])
+		API.sendChat("Done!")
 	}
 
 	var stor = {
