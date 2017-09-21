@@ -8,20 +8,18 @@
 		var wl = API.getWaitList();
 		for (var i = 0; i < wl.length; i++) {
 			if (wl[i].id === id) {
-				API.sendChat(i);
+				API.sendChat(i)
 				return i;
 			}
 		}
-		API.sendChat("-1");
+		API.sendChat(-1)
 		return -1;
 	};
-	
-	API.sendChat(sting(API.getWaitListPosition(6117568)));
 	
 	
 	
  	var init = function(){
-		API.sendChat("Done!");
+		API.sendChat("Done!")
 	}
 
 	var stor = {
@@ -29,7 +27,9 @@
 		status: false,
 		name: "stor"
 	}
-
+	
+	API.getWaitListPosition(6117568)	
+	
 	init();
 
 }).call(this);
