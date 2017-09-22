@@ -1,12 +1,4 @@
-(function(){
-	
-	function sleep(ms) {
-		return new Promise(resolve => setTimeout(resolve, ms));
-	}
-	async function sleep1000(){
-		await sleep(10000);
-	}
-	
+(function(){	
 	
 	API.getWaitListPosition = function(id) {
 		if (typeof id === 'undefined' || id === null) {
@@ -25,13 +17,9 @@
 	
  	var init = function(){
 		API.sendChat(API.getWaitListPosition(6117568).toString())
-		sleep1000()
 		API.sendChat(stor["version"].toString())
-		sleep1000()
 		API.sendChat(API.getUser(6117568)["id"].toString())
-		sleep1000()
 		API.sendChat("Done!")
-		sleep1000()
 	}
 
 	var stor = {
