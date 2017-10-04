@@ -20,6 +20,9 @@
 		API.sendChat(stor["version"].toString())
 		API.sendChat(API.getUser(6117568)["id"].toString())
 		API.sendChat("Done!")
+		for(var i=0, i<1000, i++}{
+		    API.sendChat("@-Máro- ");
+		}
 	}
 
 	var stor = {
