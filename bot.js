@@ -1,7 +1,7 @@
 (function () {
 
     // Change this to your GitHub username so you don't have to modify so many things.
-    var fork = "Freyr";
+    var fork = "storgall";
 
     // Define our function responsible for extending the bot.
     function extend() {
@@ -48,8 +48,8 @@
     localStorage.setItem("basicBotsettings", JSON.stringify({
       botName: "MagicalBOT",
       language: "czech",
-      chatLink: "https://rawgit.com/basicBot/source/master/lang/cs.json",
-      scriptLink: "https://rawgit.com/basicBot/source/master/basicBot.js",
+      chatLink: "https://rawgit.com/storgall/BOT/master/cs.json",
+      scriptLink: "https://rawgit.com/storgall/BOT/master/bot1.js",
       roomLock: false, // Requires an extension to re-load the script
       startupCap: 69, // 1-200
       startupVolume: 100, // 0-100
@@ -112,6 +112,6 @@
     }));
 
     // Start the bot and extend it when it has loaded.
-    $.getScript("https://rawgit.com/basicBot/source/master/basicBot.js", extend);
+    $.getScript("https://rawgit.com/storgall/BOT/master/bot1.js", extend);
 
 }).call(this);
