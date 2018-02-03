@@ -102,7 +102,7 @@
       website: null,
       intervalMessages: ["Iluška Vás všechny miluje <3"],
       messageInterval: 9,
-      rouletteInterval: 1,
+      rouletteInterval: 10,
       songstats: false,
       commandLiteral: "!",
       blacklists: {
