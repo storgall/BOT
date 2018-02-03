@@ -71,7 +71,7 @@
     "timelimit": "\/me @%%NAME%%, tvoje skladba je del\u0161\u00ed ne\u017e %%MAXLENGTH%% minut, pot\u0159ebuje\u0161 svolen\u00ed hr\u00e1t del\u0161\u00ed skladby.",
     "permissionownsong": "\/me :up: @%%NAME%% m\u00e1 pr\u00e1vo hr\u00e1t svoj\u00ed produkci.",
     "isblacklisted": "Tato skladba je na %%BLACKLIST%% blacklistu! P\u0159eskakuji...",
-    "isopen": "\/me Ruleta je spu\u0161t\u011bna! Napi\u0161 !join pro p\u0159ihl\u00e1\u0161en\u00ed! (Hra, ve kter\u00e9 je n\u00e1hodn\u00fd \u00fa\u010dastn\u00edk p\u0159esunut na n\u00e1hodnou pozici ve front\u011b)",
+    "isopen": "\/me @everyone Ruleta je spu\u0161t\u011bna! Napi\u0161 !join pro p\u0159ihl\u00e1\u0161en\u00ed! (Hra, ve kter\u00e9 je n\u00e1hodn\u00fd \u00fa\u010dastn\u00edk p\u0159esunut na n\u00e1hodnou pozici ve front\u011b)",
     "winnerpicked": "\/me V\u00edt\u011bz byl vybr\u00e1n! @%%NAME%% na pozici %%POSITION%%.",
     "ball": "\/me %%NAME%% se zeptal\/a: \"%%QUESTION%%\"  a %%BOTNAME%% odpov\u011bd\u011bl: \"%%RESPONSE%%\"",
     "notghosting": "[%%NAME1%%] %%NAME2%% neghostuje.",
