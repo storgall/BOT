@@ -101,7 +101,7 @@
       youtubeLink: null,
       website: null,
       intervalMessages: ["Iluška Vás všechny miluje <3"],
-      messageInterval: 20,
+      messageInterval: 1,
       songstats: false,
       commandLiteral: "!",
       blacklists: {
