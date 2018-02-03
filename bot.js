@@ -52,7 +52,7 @@
       scriptLink: "https://rawgit.com/storgall/BOT/master/bot1.js",
       roomLock: false, // Requires an extension to re-load the script
       startupCap: 69, // 1-200
-      startupVolume: 100, // 0-100
+      //startupVolume: 100, // 0-100
       startupEmoji: true, // true or false
       autowoot: true,
       autoskip: true,
