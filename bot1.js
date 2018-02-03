@@ -378,6 +378,12 @@
                 rouletteStatus: false,
                 participants: [],
                 countdown: null,
+                autoRoulette: function() {
+                    var interval = basicBot.settings.rouletteInterval;
+                    if ((basicBot.room.roomstats.songCount % interval) === 0 && basicBot.status) {
+                        basicBot.room.roulette.startRoulette();
+                    }
+                },
                 startRoulette: function() {
                     basicBot.room.roulette.rouletteStatus = true;
                     basicBot.room.roulette.countdown = setTimeout(function() {
@@ -1014,6 +1020,7 @@
             basicBot.room.roomstats.totalCurates += lastplay.score.grabs;
             basicBot.room.roomstats.songCount++;
             basicBot.roomUtilities.intervalMessage();
+            basicBot.room.roulette.autoRoulette();
             basicBot.room.currentDJID = obj.dj.id;
 
             var blacklistSkip = setTimeout(function() {
