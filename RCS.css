@@ -244,42 +244,42 @@ div.message > div.msg > div.from > span.un {
 .emote.role-host .msg .text::selection,
 .message.role-host .msg .text::-moz-selection,
 .emote.role-host .msg .text::-moz-selection {
-    color: #1FEF3A;
+    color: #F46B40;
 }
 
 .message.role-cohost .msg .text::selection,
 .emote.role-cohost .msg .text::selection,
 .message.role-cohost .msg .text::-moz-selection,
 .emote.role-cohost .msg .text::-moz-selection {
-    color: #1FEFEF;
+    color: #C42E3B;
 }
 
 .message.role-manager .msg .text::selection,
 .emote.role-manager .msg .text::selection,
 .message.role-manager .msg .text::-moz-selection,
 .emote.role-manager .msg .text::-moz-selection {
-    color: #CC1FEF;
+    color: #AC76FF;
 }
 
 .message.role-bouncer .msg .text::selection,
 .emote.role-bouncer .msg .text::selection,
 .message.role-bouncer .msg .text::-moz-selection,
 .emote.role-bouncer .msg .text::-moz-selection {
-    color: #EF1FB0;
+    color: #3083FF;
 }
 
 .message.role-dj .msg .text::selection,
 .emote.role-dj .msg .text::selection,
 .message.role-dj .msg .text::-moz-selection,
 .emote.role-dj .msg .text::-moz-selection {
-    color: #EF1F33;
+    color: #33CCFF;
 }
 
 .message.role-user .msg .text::selection,
 .emote.role-user .msg .text::selection,
 .message.role-user .msg .text::-moz-selection,
 .emote.role-user .msg .text::-moz-selection {
-    color: #221D1E;
+    color: #777f92;
 }
 
 /* Custom */
