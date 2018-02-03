@@ -95,7 +95,7 @@
       etaRestriction: false,
       welcome: false,
       opLink: null,
-      rulesLink: "https://i.imgur.com/yOZd3aq.png",
+      rulesLink: "https://image.prntscr.com/image/F0afmHnBTE_7DSfuLOgTJQ.png",
       themeLink: null,
       fbLink: null,
       youtubeLink: null,
