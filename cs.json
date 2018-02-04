@@ -129,7 +129,7 @@
     "etarestriction": "eta restriction",
     "voteskip": "voteskip",
     "voteskiplimit": "\/me [@%%NAME%%] Voteskip limit je nastaven na %%LIMIT%% meh\u016f.",
-    "voteskipexceededlimit": "\/me @%%NAME%%, tvoje skladba p\u0159ekro\u010dila limit k p\u0159esko\u010den\u00ed (%%LIMIT%% meh\u016f).",
+    "voteskipexceededlimit": "\/me @%%NAME%%, tvoje skladba p\u0159ekro\u010dila limit k p\u0159esko\u010den\u00ed (%%LIMIT%% % meh\u016f).",
     "voteskipinvalidlimit": "\/me [@%%NAME%%] Neplatn\u00fd limit k p\u0159esko\u010den\u00ed, pros\u00edm zkus to pros\u00edm znovu s pou\u017eit\u00edm \u010d\u00edsla k zaznamen\u00e1n\u00ed meh\u016f.",
     "voteskipsetlimit": "\/me [@%%NAME%%] Limit voteskip je nastaven na %%LIMIT%%.",
     "activeusersintime": "\/me [@%%NAME%% Bylo tu %%AMOUNT%% u\u017eivatel\u016f, kte\u0159\u00ed psali v posledn\u00edch %%TIME%% minut\u00e1ch.",
