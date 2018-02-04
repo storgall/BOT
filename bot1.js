@@ -960,9 +960,10 @@
             var dj = API.getDJ();
             var timeLeft = API.getTimeRemaining();
             var timeElapsed = API.getTimeElapsed();
+            var numberUsers = API.getUsers().length;
 
             if (basicBot.settings.voteSkip) {
-                if ((mehs - woots) >= (basicBot.settings.voteSkipLimit)) {
+                if ((100*mehs / numberUsers) >= (basicBot.settings.voteSkipLimit)) {
                     API.sendChat(subChat(basicBot.chat.voteskipexceededlimit, {
                         name: dj.username,
                         limit: basicBot.settings.voteSkipLimit
@@ -4046,7 +4047,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
                         var msg = chat.message;
-                        if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.voteskiplimit, {
+                        if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chatF, {
                             name: chat.un,
                             limit: basicBot.settings.voteSkipLimit
                         }));
