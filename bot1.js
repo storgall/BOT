@@ -1851,6 +1851,7 @@
                         var crowd = API.getUsers();
                         var msg = chat.message;
                         var argument = msg.substring(cmd.length + 1).replace(/@/g, '');
+                        API.sendChat(argument+" pouze zkouska");
                         var randomUser = Math.floor(Math.random() * crowd.length);
                         var randomBall = Math.floor(Math.random() * basicBot.chat.balls.length);
                         var randomSentence = Math.floor(Math.random() * 1);
