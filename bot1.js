@@ -1851,16 +1851,19 @@
                         var crowd = API.getUsers();
                         var msg = chat.message;
                         var argument = msg.substring(cmd.length + 1).replace(/@/g, '');
-                        API.sendChat(argument+" pouze zkouska");
                         var randomUser = Math.floor(Math.random() * crowd.length);
                         var randomBall = Math.floor(Math.random() * basicBot.chat.balls.length);
                         var randomSentence = Math.floor(Math.random() * 1);
-                        API.sendChat(subChat(basicBot.chat.ball, {
-                            name: chat.un,
-                            botname: basicBot.settings.botName,
-                            question: argument,
-                            response: basicBot.chat.balls[randomBall]
-                        }));
+                        if (argument == "je tu bot?" || argument == "bote jsi tu?") {
+                            API.sendChat("Ano, jsem tu");
+                        } else {
+                            API.sendChat(subChat(basicBot.chat.ball, {
+                                name: chat.un,
+                                botname: basicBot.settings.botName,
+                                question: argument,
+                                response: basicBot.chat.balls[randomBall]
+                            }));
+                        }
                     }
                 }
             },
