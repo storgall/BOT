@@ -1855,7 +1855,7 @@
                         var randomBall = Math.floor(Math.random() * basicBot.chat.balls.length);
                         var randomSentence = Math.floor(Math.random() * 1);
                         if (argument.toLowerCase() == "je tu bot?" || argument.toLowerCase() == "bote jsi tu?" || argument.toLowerCase() == "je tu bot ?" || argument.toLowerCase() == "bote jsi tu ?") {
-                            API.sendChat(subChat("Ano, jsem tu"));
+                            API.sendChat(subChat("\/me Ano, jsem tu"));
                         } else {
                             API.sendChat(subChat(basicBot.chat.ball, {
                                 name: chat.un,
