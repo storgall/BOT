@@ -30,7 +30,7 @@
     var kill = function() {
         clearInterval(basicBot.room.autodisableInterval);
         clearInterval(basicBot.room.afkInterval);
-        basicBot.status = false;
+        //basicBot.status = false;
     };
 
     // This socket server is used solely for statistical and troubleshooting purposes.
@@ -2737,6 +2737,7 @@
                         API.sendChat(basicBot.chat.kill);
                         basicBot.disconnectAPI();
                         setTimeout(function() {
+                            API.sendChat("\/me už ne REDPERDe");
                             kill();
                         }, 1000);
                     }
