@@ -2732,10 +2732,10 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        storeToStorage();
+                        //storeToStorage();
                         //sendToSocket();
                         API.sendChat(basicBot.chat.kill);
-                        basicBot.disconnectAPI();
+                        //basicBot.disconnectAPI();
                         setTimeout(function() {
                             API.sendChat("\/me už ne REDPERDe");
                             kill();
