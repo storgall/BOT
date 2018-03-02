@@ -2738,6 +2738,7 @@
                         //basicBot.disconnectAPI();
                         setTimeout(function() {
                             API.sendChat("\/me už ne REDPERDe");
+                            API.sendChat(chat.uid);
                             kill();
                         }, 1000);
                     }
