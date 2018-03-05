@@ -2634,7 +2634,6 @@
                     else {
                         if (basicBot.room.roulette.rouletteStatus && basicBot.room.roulette.participants.indexOf(chat.uid) < 0) {
                             basicBot.room.roulette.participants.push(chat.uid);
-                            API.sendChat(chat.uid);
                             API.sendChat(subChat(basicBot.chat.roulettejoin, {
                                 name: chat.un
                             }));
