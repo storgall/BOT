@@ -1856,6 +1856,12 @@
                         var randomSentence = Math.floor(Math.random() * 1);
                         if (argument.toLowerCase() == "je tu bot?" || argument.toLowerCase() == "bote jsi tu?" || argument.toLowerCase() == "je tu bot ?" || argument.toLowerCase() == "bote jsi tu ?") {
                             API.sendChat(subChat("\/me Ano, jsem tu"));
+                        } else if (argument.toLowerCase() == "roulette" || argument.toLowerCase() == "kdy bude ruleta?" || argument.toLowerCase() == "roulette?" || argument.toLowerCase() == "kdy bude ruleta ?") {
+                            API.sendChat(subChat("\/me Ruleta bude za " + (10-basicBot.room.roomstats.songCount%basicBot.settings.rouletteInterval) + " písniček :)"));
+                        } else if (argument.toLowerCase() == "songcount" || argument.toLowerCase() == "song count" || argument.toLowerCase() == "songcount?" || argument.toLowerCase() == "song count?") {
+                            API.sendChat(subChat(basicBot.room.roomstats.songCount));
+                        } else if (argument.toLowerCase() == "maximum song length" || argument.toLowerCase() == "maximální délka songu" || argument.toLowerCase() == "jak dlouhý může být song?" || argument.toLowerCase() == "jak douhou písničku můžu hrát?") {
+                            API.sendChat(subChat("\/me Maximální dlka písničky je " + Math.round(basicBot.settings.maximumSongLength) + " minut a " + (60*(basicBot.settings.maximumSongLength-Math.round(basicBot.settings.maximumSongLength))) + " sekund"));
                         } else {
                             API.sendChat(subChat(basicBot.chat.ball, {
                                 name: chat.un,
