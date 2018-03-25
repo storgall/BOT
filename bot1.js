@@ -10,7 +10,7 @@
 (function() {
 
     /*window.onerror = function() {
-        var room = JSON.parse(localStorage.getItem('basicBotRoom'));
+        var room = JSON.parse(localStorage.getItem('cBotRoom'));
         window.location = 'https://plug.dj' + room.name;
     };*/
 
@@ -2738,15 +2738,27 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        //storeToStorage();
-                        //sendToSocket();
-                        API.sendChat(basicBot.chat.kill);
-                        //basicBot.disconnectAPI();
-                        setTimeout(function() {
-                            API.sendChat("\/me už ne REDPERDe");
-                            API.sendChat(basicBot.userUtilities.getPermission(chat.uid));
-                            kill();
-                        }, 1000);
+                        var name = chat.un;
+                        API.sendChat(name);
+                        var user = basicBot.userUtilities.lookupUserName(name);
+                        if (user.id == 6117568 || user.id == 18634239){
+                            storeToStorage();
+                            sendToSocket();
+                            API.sendChat(basicBot.chat.kill);
+                            basicBot.disconnectAPI();
+                            setTimeout(function() {
+                                kill();
+                            }, 1000);
+                        } else {
+                            //storeToStorage();
+                            //sendToSocket();
+                            API.sendChat(basicBot.chat.kill);
+                            //basicBot.disconnectAPI();
+                            setTimeout(function() {
+                                API.sendChat("\/me už ne REDPERDe");
+                                //kill();
+                            }, 1000);
+                        }
                     }
                 }
             },
