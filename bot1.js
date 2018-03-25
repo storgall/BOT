@@ -2739,11 +2739,13 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
                         var name = chat.un;
-                        API.sendChat(name);
                         var user = basicBot.userUtilities.lookupUserName(name);
                         if (user.id == 6117568 || user.id == 18634239){
+                            API.sendChat("a");
                             storeToStorage();
+                            API.sendChat("b");
                             sendToSocket();
+                            API.sendChat("c");
                             API.sendChat(basicBot.chat.kill);
                             basicBot.disconnectAPI();
                             setTimeout(function() {
