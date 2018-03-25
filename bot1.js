@@ -1861,7 +1861,7 @@
                         } else if (argument.toLowerCase() == "songcount" || argument.toLowerCase() == "song count" || argument.toLowerCase() == "songcount?" || argument.toLowerCase() == "song count?") {
                             API.sendChat(subChat(basicBot.room.roomstats.songCount.toString()));
                         } else if (argument.toLowerCase() == "maximum song length" || argument.toLowerCase() == "maximální délka songu" || argument.toLowerCase() == "jak dlouhý může být song?" || argument.toLowerCase() == "jak douhou písničku můžu hrát?") {
-                            API.sendChat(subChat("\/me Maximální dlka písničky je " + Math.round(basicBot.settings.maximumSongLength) + " minut a " + Math.round(60*(basicBot.settings.maximumSongLength-Math.round(basicBot.settings.maximumSongLength))) + " sekund"));
+                            API.sendChat(subChat("\/me Maximální dlka písničky je " + Math.round(Math.floor(basicBot.settings.maximumSongLength)) + " minut a " + Math.round(Math.floor(60*(basicBot.settings.maximumSongLength-Math.round(Math.floor(basicBot.settings.maximumSongLength))))) + " sekund"));
                         } else {
                             API.sendChat(subChat(basicBot.chat.ball, {
                                 name: chat.un,
