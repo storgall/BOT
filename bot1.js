@@ -2397,11 +2397,10 @@
                         if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {
                             name: chat.un
                         }));
-                        API.sendChat("hello");
-                        if (API.sendChat(user.id) == 6117568){
+                        if (user.id == 6117568){
                             API.sendChat("hello");
                         }
-                        if (API.sendChat(user.id) == "6117568"){
+                        if (user.id == "6117568"){
                             API.sendChat("hi");
                         }
                         var pos = API.getWaitListPosition(user.id);
