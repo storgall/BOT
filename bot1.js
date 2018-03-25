@@ -2397,8 +2397,8 @@
                         if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {
                             name: chat.un
                         }));
-                        API.sendChat(user);
-                        API.sendChat(API.getWaitListPosition(user.id));
+                        API.sendChat(user.toString);
+                        API.sendChat(API.getWaitListPosition(user.id.toString));
                         var pos = API.getWaitListPosition(user.id);
                         var realpos = pos + 1;
                         if (name == dj) return API.sendChat(subChat(basicBot.chat.youaredj, {
