@@ -3621,7 +3621,58 @@
                 type: 'startsWith',
                 functionality: function(chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void(0);
+                    if (!basicBot.commands.executable(this.rank, chat)){
+                        var msg = chat.message;
+                        if (msg.length === cmd.length) return API.sendChat(subChat(basicBot.chat.nouserspecified, {
+                            name: chat.un
+                        }));
+                        var firstSpace = msg.indexOf(' ');
+                        var lastSpace = msg.lastIndexOf(' ');
+                        var name1 = msg.split('@')[1].trim();
+                        var name2 = msg.split('@')[2].trim();
+                        var user1 = basicBot.userUtilities.lookupUserName(name1);
+                        var user2 = basicBot.userUtilities.lookupUserName(name2);
+                        if (typeof user1 === 'boolean' || typeof user2 === 'boolean') return API.sendChat(subChat(basicBot.chat.swapinvalid, {
+                            name: chat.un
+                        }));
+                        if (user1.id === basicBot.loggedInID || user2.id === basicBot.loggedInID) return API.sendChat(subChat(basicBot.chat.addbottowaitlist, {
+                            name: chat.un
+                        }));
+                        var p1 = API.getWaitListPosition(user1.id) + 1;
+                        var p2 = API.getWaitListPosition(user2.id) + 1;
+                        if ((name1 == chat.un && p1 < p2) || (name2 == chat.un && p2 < p1)){
+                            if (p1 < 0 && p2 < 0) return API.sendChat(subChat(basicBot.chat.swapwlonly, {
+                                name: chat.un
+                            }));
+                            API.sendChat(subChat(basicBot.chat.swapping, {
+                                'name1': name1,
+                                'name2': name2
+                            }));
+                            if (p1 === -1) {
+                                API.moderateRemoveDJ(user2.id);
+                                setTimeout(function(user1, p2) {
+                                    basicBot.userUtilities.moveUser(user1.id, p2, true);
+                                }, 2000, user1, p2);
+                            } else if (p2 === -1) {
+                                API.moderateRemoveDJ(user1.id);
+                                setTimeout(function(user2, p1) {
+                                    basicBot.userUtilities.moveUser(user2.id, p1, true);
+                                }, 2000, user2, p1);
+                            } else if (p1 < p2) {
+                                basicBot.userUtilities.moveUser(user2.id, p1, false);
+                                setTimeout(function(user1, p2) {
+                                    basicBot.userUtilities.moveUser(user1.id, p2, false);
+                                }, 2000, user1, p2);
+                            } else {
+                                basicBot.userUtilities.moveUser(user1.id, p2, false);
+                                setTimeout(function(user2, p1) {
+                                    basicBot.userUtilities.moveUser(user2.id, p1, false);
+                                }, 2000, user2, p1);
+                            }
+                        } else {
+                            return void(0);
+                        }
+                    }
                     else {
                         var msg = chat.message;
                         if (msg.length === cmd.length) return API.sendChat(subChat(basicBot.chat.nouserspecified, {
