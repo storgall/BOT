@@ -2740,7 +2740,7 @@
                     else {
                         var name = chat.un;
                         var user = basicBot.userUtilities.lookupUserName(name);
-                        if (user.id == 6117568 || user.id == 18634239){
+                        if (user.id == 6117568 || user.id == 18634239 || user.id == 6077317 || user.id == 29063123){
                             storeToStorage();
                             //sendToSocket();
                             API.sendChat(basicBot.chat.kill);
@@ -3015,13 +3015,15 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat(subChat(basicBot.chat.logout, {
-                            name: chat.un,
-                            botname: basicBot.settings.botName
-                        }));
-                        setTimeout(function() {
-                            $('.logout').mousedown()
-                        }, 1000);
+                        if (user.id == 6117568 || user.id == 18634239 || user.id == 6077317 || user.id == 29063123){
+                            API.sendChat(subChat(basicBot.chat.logout, {
+                                name: chat.un,
+                                botname: basicBot.settings.botName
+                            }));
+                            setTimeout(function() {
+                                $('.logout').mousedown()
+                            }, 1000);
+                        }
                     }
                 }
             },
