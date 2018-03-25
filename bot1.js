@@ -2741,11 +2741,8 @@
                         var name = chat.un;
                         var user = basicBot.userUtilities.lookupUserName(name);
                         if (user.id == 6117568 || user.id == 18634239){
-                            API.sendChat("a");
                             storeToStorage();
-                            API.sendChat("b");
-                            sendToSocket();
-                            API.sendChat("c");
+                            //sendToSocket();
                             API.sendChat(basicBot.chat.kill);
                             basicBot.disconnectAPI();
                             setTimeout(function() {
