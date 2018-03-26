@@ -397,7 +397,7 @@
                         API.sendChat(basicBot.room.roulette.participants[koko].toString());
                         API.sendChat("c");
                         var dj = API.getDJ();
-                        API.sendChat(dj.id.toString);
+                        API.sendChat(dj.id.toString());
                         API.sendChat("d");
                         if (basicBot.room.roulette.participants[koko].id == dj.id){
                             basicBot.room.roulette.participants.splice(koko,1);
