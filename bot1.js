@@ -394,12 +394,10 @@
                 endRoulette: function() {
                     basicBot.room.roulette.rouletteStatus = false;
                     for (var koko = 0; koko < basicBot.room.roulette.participants.length; koko++){
-                        API.sendChat(basicBot.room.roulette.participants[koko].toString());
-                        API.sendChat("c");
                         var dj = API.getDJ();
-                        API.sendChat(dj.id.toString());
-                        API.sendChat("d");
                         if (basicBot.room.roulette.participants[koko].id == dj.id){
+                            API.sendChat(basicBot.room.roulette.participants[koko].toString());
+                            API.sendChat(dj.id.toString());
                             basicBot.room.roulette.participants.splice(koko,1);
                         }
                     }
