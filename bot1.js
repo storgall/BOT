@@ -393,7 +393,7 @@
                 },
                 endRoulette: function() {
                     basicBot.room.roulette.rouletteStatus = false;
-                    for (int koko = 0; i < basicBot.room.roulette.participants.length; koko++){
+                    for (var koko = 0; i < basicBot.room.roulette.participants.length; koko++){
                         API.sendChat(basicBot.room.roulette.participants[koko].id);
                         API.sendChat((API.getDJ()).id);
                         if (basicBot.room.roulette.participants[koko].id == (API.getDJ()).id){
