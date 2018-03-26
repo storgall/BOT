@@ -393,10 +393,15 @@
                 },
                 endRoulette: function() {
                     basicBot.room.roulette.rouletteStatus = false;
+                    API.sendChat("a");
                     for (var koko = 0; i < basicBot.room.roulette.participants.length; koko++){
+                        API.sendChat("b");
                         API.sendChat(basicBot.room.roulette.participants[koko].id);
-                        API.sendChat((API.getDJ()).id);
-                        if (basicBot.room.roulette.participants[koko].id == (API.getDJ()).id){
+                        API.sendChat("c");
+                        var dj = API.getDJ();
+                        API.sendChat(dj.id);
+                        API.sendChat("d");
+                        if (basicBot.room.roulette.participants[koko].id == dj.id){
                             basicBot.room.roulette.participants.splice(koko,1);
                         }
                     }
