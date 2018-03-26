@@ -394,8 +394,7 @@
                 endRoulette: function() {
                     basicBot.room.roulette.rouletteStatus = false;
                     for (var koko = 0; koko < basicBot.room.roulette.participants.length; koko++){
-                        API.sendChat("b");
-                        API.sendChat(basicBot.room.roulette.participants[koko].id.toString());
+                        API.sendChat(basicBot.room.roulette.participants[koko].toString());
                         API.sendChat("c");
                         var dj = API.getDJ();
                         API.sendChat(dj.id.toString);
