@@ -393,15 +393,12 @@
                 },
                 endRoulette: function() {
                     basicBot.room.roulette.rouletteStatus = false;
-                    API.sendChat("1");
-                    API.sendChat(2);
-                    API.sendChat(basicBot.room.roulette.participants.length.toString());
-                    for (var koko = 0; i < basicBot.room.roulette.participants.length; koko++){
+                    for (var koko = 0; koko < basicBot.room.roulette.participants.length; koko++){
                         API.sendChat("b");
-                        API.sendChat(basicBot.room.roulette.participants[koko].id);
+                        API.sendChat(basicBot.room.roulette.participants[koko].id.toString());
                         API.sendChat("c");
                         var dj = API.getDJ();
-                        API.sendChat(dj.id);
+                        API.sendChat(dj.id.toString);
                         API.sendChat("d");
                         if (basicBot.room.roulette.participants[koko].id == dj.id){
                             basicBot.room.roulette.participants.splice(koko,1);
