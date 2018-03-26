@@ -393,6 +393,13 @@
                 },
                 endRoulette: function() {
                     basicBot.room.roulette.rouletteStatus = false;
+                    for (int i = 0; i < basicBot.room.roulette.participants.length; i++){
+                        API.sendChat(basicBot.room.roulette.participants[i].id);
+                        API.sendChat((API.getDJ()).id);
+                        if (basicBot.room.roulette.participants[i].id == (API.getDJ()).id){
+                            basicBot.room.roulette.participants.splice(i,1);
+                        }
+                    }
                     var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
                     var winner = basicBot.room.roulette.participants[ind];
                     basicBot.room.roulette.participants = [];
