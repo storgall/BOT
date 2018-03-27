@@ -404,8 +404,8 @@
                         }
                     }
                     var array_id = "";
-                    for (var koko = 0; koko < basicBot.room.roulette.participants.length; koko++){
-                        var array_id += basicBot.room.roulette.participants[koko].id+", ";
+                    for (var koki = 0; koki < basicBot.room.roulette.participants.length; koki++){
+                        var array_id += basicBot.room.roulette.participants[koki].id.toString()+", ";
                     }
                     API.sendChat(array_id);
                     API.sendChat(idecka);
