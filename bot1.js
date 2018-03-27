@@ -401,14 +401,15 @@
                             //API.sendChat(basicBot.room.roulette.participants[koko].toString());
                             //API.sendChat(dj.id.toString());
                             basicBot.room.roulette.participants.splice(koko,1);
+                            koko -= 1;
                         }
                     }
                     var arrayid = "";
                     for (var koki = 0; koki < basicBot.room.roulette.participants.length; koki++){
                         arrayid += basicBot.room.roulette.participants[koki].toString()+", ";
                     }
-                    API.sendChat(arrayid);
-                    API.sendChat(idecka);
+                    //API.sendChat(arrayid);
+                    //API.sendChat(idecka);
                     var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
                     var winner = basicBot.room.roulette.participants[ind];
                     basicBot.room.roulette.participants = [];
