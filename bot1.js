@@ -397,7 +397,7 @@
                     for (var koko = 0; koko < basicBot.room.roulette.participants.length; koko++){
                         var dj = API.getDJ();
                         idecka += basicBot.room.roulette.participants[koko].toString()+", "+dj.id.toString()+"; "
-                        if (basicBot.room.roulette.participants[koko].id == dj.id){
+                        if (basicBot.room.roulette.participants[koko].toString() == dj.id.toString()){
                             //API.sendChat(basicBot.room.roulette.participants[koko].toString());
                             //API.sendChat(dj.id.toString());
                             basicBot.room.roulette.participants.splice(koko,1);
