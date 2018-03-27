@@ -403,6 +403,11 @@
                             basicBot.room.roulette.participants.splice(koko,1);
                         }
                     }
+                    var array_id = "";
+                    for (var koko = 0; koko < basicBot.room.roulette.participants.length; koko++){
+                        var array_id += basicBot.room.roulette.participants[koko].id+", ";
+                    }
+                    API.sendChat(array_id);
                     API.sendChat(idecka);
                     var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
                     var winner = basicBot.room.roulette.participants[ind];
